@@ -1,0 +1,83 @@
+body{
+    font-family: 'Poppin', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../resources/images/_fondo_blaco.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta el nivel de opacidad aquí */
+  }
+.card{
+    box-shadow: 0 0 10px 5px #b1b0b0;
+    margin-top: 15rem;
+    margin-left: 10%;
+    min-width: 40rem ;
+    max-width: 90rem;
+}
+.btn{
+    width: 40%;
+    margin: 50px 23px;
+}
+.olvido-contrasena{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 19px;
+    color: #39A900;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.logo-sena-verde{
+    max-height: 30rem;
+}
+.logo-asiste-horizontal{
+    height: 20%;
+}
+.all-conten{
+    margin-top: 3rem;
+}
+.texto{
+    margin-top: 20px;
+    color: darkgray;
+    margin-bottom: 40px;
+}
+.imagen-login{
+    max-height: 45rem;
+}
+.labeles input:focus{
+    box-shadow: 0 0 0 0
+}
+.labeles input, .input-group-text{
+    margin-top: 25px;
+}
+.input-group-text{
+    background-color:white; border: none;
+}
+.desplegable{
+    margin-left: 6px;
+}
+.footer {
+    font-size: 20px;
+    margin-top: 11%;
+    margin-bottom: 0;
+    background-color: #39A900;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+.footer p {
+    margin: 0;
+}
+  
