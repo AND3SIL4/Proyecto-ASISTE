@@ -1,0 +1,78 @@
+body{
+    font-family: 'Poppin', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media(max-width: 499px){
+    .card{
+        width: 100%;
+    }
+}
+@media(min-width: 500px){
+    .card{
+        width: 300px;
+    }
+}
+.all-conten{
+    margin-top: 30px;
+}
+.card{
+    box-shadow: 0 0 10px 5px #b1b0b0;
+    margin-top: 7rem;
+    margin-left: 10%;
+    min-width: 40rem ;
+    max-width: 50rem;
+}
+img{
+    max-height: 50px;
+}
+.logo-sena-verde{
+    max-height: 10rem !important;
+}
+.logo-asiste-horizontal{
+    max-height: 10rem !important;
+}
+.texto{
+    margin-top: 20px;
+    color: darkgray;
+    margin-bottom: 40px;
+}
+input, label, select{
+    height: 80px !important;
+    margin-top: 20px !important;
+    color: darkgray !important;
+    border-radius: 15px !important;
+}
+button{
+    margin-top: 40px !important;
+    font-size: 25px !important; 
+    background-color: #39A900 !important; 
+    border-color: #39A900 !important;
+    margin-left: 15rem !important;
+    width: 40%;
+    margin: 50px 23px;
+}
+input:focus, label:focus, select:focus{
+    border-color: #39A900 !important;
+    box-shadow: none !important;
+}
+
+.footer {
+    font-size: 20px;
+    margin-top: 5rem;
+    margin-bottom: 20px !;
+    background-color: #39A900;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+.footer p {
+    margin: 0;
+}
+
+
+
+  
