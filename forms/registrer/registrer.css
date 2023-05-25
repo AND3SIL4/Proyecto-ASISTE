@@ -1,58 +1,72 @@
 body{
     font-family: 'Poppin', sans-serif;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-@media(max-width: 499px){
-    .card{
-        width: 100%;
-    }
-}
-@media(min-width: 500px){
-    .card{
-        width: 300px;
-    }
-}
-.all-conten{
-    margin-top: 30px;
 }
 .card{
+    position: absolut !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, 10%) !important;
     box-shadow: 0 0 10px 5px #b1b0b0;
-    margin-top: 7rem;
-    margin-left: 10%;
-    min-width: 40rem ;
-    max-width: 50rem;
+    max-width: 30rem;
+    max-height: 50rem;
 }
 img{
     max-height: 50px;
 }
+@media(max-width: 430px){
+    .logo-asiste-horizontal, .logo-sena-verde{
+        height: 4rem;
+    }
+    .footer{
+        font-size: 15px !important;
+    }
+    .texto{
+        font-size: 15px !important;
+    }
+    .card{
+        max-width: 20rem;
+    }
+}
+.logos{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px !important;
+    margin-bottom: 0%;
+}
 .logo-sena-verde{
-    max-height: 10rem !important;
+    max-height: 5rem !important;
 }
 .logo-asiste-horizontal{
-    max-height: 10rem !important;
+    max-height: 5rem !important;
 }
 .texto{
+    font-size: 20px;
     margin-top: 20px;
     color: darkgray;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+}
+input{
+    margin-bottom: 20px !important;
+}
+label{
+    margin-top: -5px !important;
 }
 input, label, select{
-    height: 80px !important;
-    margin-top: 20px !important;
+    height: 50px !important;
     color: darkgray !important;
-    border-radius: 15px !important;
+    border-radius: 10px !important;
+}
+.button{
+    display: flex;
+    justify-content: flex-end;
 }
 button{
-    margin-top: 40px !important;
-    font-size: 25px !important; 
+    margin-top: 10px !important;
+    font-size: 18px !important; 
     background-color: #39A900 !important; 
     border-color: #39A900 !important;
-    margin-left: 15rem !important;
-    width: 40%;
+    width: 130px;
+    color: white !important;
     margin: 50px 23px;
 }
 input:focus, label:focus, select:focus{
@@ -60,10 +74,11 @@ input:focus, label:focus, select:focus{
     box-shadow: none !important;
 }
 
-.footer {
+.footer{
+    width: auto;
     font-size: 20px;
-    margin-top: 5rem;
-    margin-bottom: 20px !;
+    margin-top: 180px;
+    margin-bottom: 20px;
     background-color: #39A900;
     color: white;
     padding: 20px 0;

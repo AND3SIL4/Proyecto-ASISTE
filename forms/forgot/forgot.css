@@ -1,0 +1,20 @@
+/* .buton{
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+div{
+  padding: 20px;
+  border-color: black;
+  max-width: ;
+}
+@media(max-width: 700px){
+  .buton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

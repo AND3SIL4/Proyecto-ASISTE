@@ -6,19 +6,19 @@ body{
     width: 100%;
     height: 100%;
 }
-.body::before {
+body::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Ajusta el nivel de opacidad aquí */
   }
 .card{
     box-shadow: 0 0 10px 5px #b1b0b0;
     margin-top: 15rem;
     margin-left: 10%;
+    max-height: 50rem;
     min-width: 40rem ;
     max-width: 90rem;
 }
@@ -52,10 +52,10 @@ body{
 .imagen-login{
     max-height: 45rem;
 }
-.labeles input:focus{
+.labels input:focus{
     box-shadow: 0 0 0 0
 }
-.labeles input, .input-group-text{
+.labels input, .input-group-text{
     margin-top: 25px;
 }
 .input-group-text{

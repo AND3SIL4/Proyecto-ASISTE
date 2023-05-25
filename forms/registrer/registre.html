@@ -13,85 +13,80 @@
 </head>
 
 <body class="p-2 m-0 border-0 bd-example">
-    <div class="">
-        <div class="card container-fluid mb-3 bg-white">
-            <div class="row g-0">
-                <div class="">
-                    <div class="all-conten d-flex justify-content-evenly">
-                        <img class="logo-asiste-horizontal" id="sitio-web-asiste"
-                            src="../resources/images/_logo_asiste_horizontal.png"
-                            alt="Logo de asiste con letras horizontales">
-                        <img class="logo-sena-verde" id="sitio-web-sena" src="../resources/images/_logo_sena_verde.png"
-                            alt="Logo del SENA verde">
+    <div class="card mb-3 bg-white">
+        <div class="row g-0">
+            <div class="logos">
+                <img class="logo-asiste-horizontal" id="sitio-web-asiste"
+                    src="../resources/images/_logo_asiste_horizontal.png" alt="Logo de asiste con letras horizontales">
+                <img class="logo-sena-verde" id="sitio-web-sena" src="../resources/images/_logo_sena_verde.png"
+                    alt="Logo del SENA verde">
+            </div>
+            <div class="card-body">
+                <h1 class="text-center texto">REGISTRO DE USUARIOS APRENDICES</h1>
+                <div class="labeles">
+                    <div class="input-group mb-3">
+                        <select class="form-select" id="inputGroupSelect01">
+                            <option value="CC">Cédula de Ciudadania</option>
+                            <option value="TI">Tarjeta de Identidad</option>
+                            <option value="CE">Cédula de Extrangeria</option>
+                            <option value="PEP">PEP</option>
+                        </select>
                     </div>
-                    <div class="card-body">
-                        <h1 class="text-center texto">REGISTRO DE USUARIOS APRENDICES</h1>
-                        <div class="labeles">
-                            <div class="input-group mb-3 desplegable ">
-                                <select class="form-select" id="inputGroupSelect01">
-                                    <option value="CC">Cédula de Ciudadania</option>
-                                    <option value="TI">Tarjeta de Identidad</option>
-                                    <option value="CE">Cédula de Extrangeria</option>
-                                    <option value="PEP">PEP</option>
-                                </select>
-                            </div>
-                            <div class="input-group input-group-lg">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control form-user" id="user" placeholder="Username"
-                                        aria-label="Username" aria-describedby="basic-addon1">
-                                    <label for="userName">Número de documento</label>
-                                </div>
-                                <div class="input-group mb-3 desplegable">
-                                    <select class="form-select" id="inputGroupSelect01">
-                                        <option value="CC">Programa de formación</option>
-                                        <option value="TI">Analisis y desarrollo de software - ADSO</option>
-                                    </select>
-                                </div>
-                                <div class="input-group mb-3 desplegable">
-                                    <select class="form-select " id="inputGroupSelect01">
-                                        <option value="CC">Número de ficha</option>
-                                        <option value="TI">2503804</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="input-group input-group-lg">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control form-user" id="password"
-                                        placeholder="Contraseña" aria-label="Contraseña"
-                                        aria-describedby="basic-addon1">
-                                    <label for="password">Correo institucional</label>
-                                </div>
-                                <div class="input-group input-group-lg">
-                                    <div class="form-floating">
-                                        <input type="password" class="form-control form-user" id="password"
-                                            placeholder="Contraseña" aria-label="Contraseña"
-                                            aria-describedby="basic-addon1">
-                                        <label for="password">Contraseña</label>
-                                    </div>
-                                </div>
-                                <div class="input-group input-group-lg">
-                                    <div class="form-floating">
-                                        <input type="password" class="form-control form-user" id="password"
-                                            placeholder="Contraseña" aria-label="Contraseña"
-                                            aria-describedby="basic-addon1">
-                                        <label for="password">Confirmar contraseña</label>
-                                    </div>
-                                </div>
+                    <div class="input-group input-group-lg">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-user" id="user" placeholder="Username"
+                                aria-label="Username" aria-describedby="basic-addon1">
+                            <label for="userName">Número de documento</label>
+                        </div>
+                        <div class="input-group mb-3 desplegable">
+                            <select class="form-select" id="inputGroupSelect01">
+                                <option value="CC">Programa de formación</option>
+                                <option value="TI">Analisis y desarrollo de software - ADSO</option>
+                            </select>
+                        </div>
+                        <div class="input-group mb-3 desplegable">
+                            <select class="form-select " id="inputGroupSelect01">
+                                <option value="CC">Número de ficha</option>
+                                <option value="TI">2503804</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-group input-group-lg">
+                        <div class="form-floating">
+                            <input type="email" class="form-control form-user" id="password" placeholder="Contraseña"
+                                aria-label="Contraseña" aria-describedby="basic-addon1">
+                            <label for="password">Correo institucional</label>
+                        </div>
+                        <div class="input-group input-group-lg">
+                            <div class="form-floating">
+                                <input type="password" class="form-control form-user" id="password"
+                                    placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1">
+                                <label for="password">Contraseña</label>
                             </div>
                         </div>
-                        <div class="buttones text-center d-flex justify-content-between">
-                            <button class="btn btn-primary" id="btn">Registrarse</button>
+                        <div class="input-group input-group-lg">
+                            <div class="form-floating">
+                                <input type="password" class="form-control form-user" id="password"
+                                    placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1">
+                                <label for="password">Confirmar contraseña</label>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="button">
+                        <button class="btn" id="btn">Registrarse</button>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="register.js"></script>
-</body>
-<footer class="footer">
-    <div class="container">
-        <p>&copy; 2023 ASISTE SENA Sitio Web. Todos los derechos reservados.</p>
     </div>
-</footer>
+    <script src="register.js"></script>
+    <div class="footer">
+            <div class="container">
+                <p>&copy; 2023 ASISTE SENA Sitio Web. Todos los derechos reservados.</p>
+            </div>
+    </div>
+</body>
 
 </html>
