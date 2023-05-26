@@ -25,6 +25,7 @@ img{
     }
     .card{
         max-width: 20rem;
+        margin-top: -60px;
     }
 }
 .logos{
@@ -56,9 +57,17 @@ input, label, select{
     color: darkgray !important;
     border-radius: 10px !important;
 }
+a{
+    margin-top: 20px;
+    margin-left: 5px;
+    text-decoration: none !important;
+    color: darkgray !important;
+    font-size: 12px;
+    
+}
 .button{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 button{
     margin-top: 10px !important;

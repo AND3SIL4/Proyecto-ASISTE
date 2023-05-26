@@ -1,0 +1,102 @@
+body{
+  font-family: 'Poppin', sans-serif;
+}
+.card{
+  position: absolut !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, 10%) !important;
+  box-shadow: 0 0 10px 5px #b1b0b0;
+  max-width: 30rem;
+  max-height: 50rem;
+}
+img{
+  max-height: 50px;
+}
+@media(max-width: 430px){
+  .logo-asiste-horizontal, .logo-sena-verde{
+      height: 4rem;
+  }
+  .footer{
+      font-size: 15px !important;
+  }
+  .texto{
+      font-size: 15px !important;
+  }
+  .card{
+      max-width: 20rem;
+      margin-top: -60px;
+  }
+}
+.logos{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px !important;
+  margin-bottom: 0%;
+}
+.logo-sena-verde{
+  max-height: 5rem !important;
+}
+.logo-asiste-horizontal{
+  max-height: 5rem !important;
+}
+.texto{
+  font-size: 20px;
+  margin-top: 20px;
+  color: darkgray;
+  margin-bottom: 20px;
+}
+input{
+  margin-bottom: 20px !important;
+}
+label{
+  margin-top: -5px !important;
+}
+input, label, select{
+  height: 50px !important;
+  color: darkgray !important;
+  border-radius: 10px !important;
+}
+a{
+  margin-top: 20px;
+  margin-left: 5px;
+  text-decoration: none !important;
+  color: darkgray !important;
+  font-size: 12px;
+  
+}
+.button{
+  display: flex;
+  justify-content: flex-end;
+}
+button{
+  margin-top: 10px !important;
+  font-size: 18px !important; 
+  background-color: #39A900 !important; 
+  border-color: #39A900 !important;
+  width: 130px;
+  color: white !important;
+  margin: 50px 23px;
+}
+input:focus, label:focus, select:focus{
+  border-color: #39A900 !important;
+  box-shadow: none !important;
+}
+
+.footer{
+  width: auto;
+  font-size: 20px;
+  margin-top: 250px;
+  margin-bottom: 20px;
+  background-color: #39A900;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer p {
+  margin: 0;
+}
+
+
+
+
