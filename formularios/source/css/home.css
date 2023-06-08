@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.logo_asiste{
+    opacity: 1;
+    width: 300px;
+}
+img{
+    width: 50px;
+}
+button{
+    border: none;
+    background-color: white;
+    font-size: 18px;
+    width: 150px;
+    height: 40px;
+}
+.botones{
+    padding: 20px;
+}
+.botones, .botones div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.botones div .settings{
+    border-radius: 15px;
+    width: 70px;
+    height: 70px;
+    background-color: green;
+}
+button, img{
+    opacity: 0.6;
+}
+button:hover, button:focus{
+    color: green;
+    opacity: 1;
+}
+.botones div:hover{
+    scale: 0.98;
+    border-bottom: solid 2px green;
+}
+.botones #logo-asiste:hover{
+    border: none;
+}
