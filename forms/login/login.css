@@ -1,9 +1,5 @@
-* {
+body {
     font-family: 'Poppin', sans-serif;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: none;
-
 }
 .first {
     margin-top: 100px;
@@ -155,8 +151,4 @@ a {
     margin-top: 10px;
     display: flex;
     justify-content: flex-end;
-}
-
-.form{
-    
 }
