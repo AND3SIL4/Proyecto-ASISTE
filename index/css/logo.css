@@ -1,0 +1,12 @@
+.logo img{
+    height: 60px;
+    margin: 20px;
+    
+}
+.inicio{
+    align-content: space-between ;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+     
+}
