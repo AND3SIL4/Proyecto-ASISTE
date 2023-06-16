@@ -1,6 +1,9 @@
 body {
     font-family: 'Poppin', sans-serif;
 }
+.form{
+    margin-left: 3rem !important;
+}
 .first {
     margin-top: 100px;
     display: flex;

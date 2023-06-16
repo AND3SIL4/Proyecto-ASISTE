@@ -6,7 +6,7 @@ document.getElementById("sitio-web-sena").addEventListener("click", function(){
 });
 document.getElementById("registro-usuarios").addEventListener("click", function(){
   // alert("Regristro de usuarios...")
-  window.location.href="../registrer/aprendices/registre.html"
+  window.location.href="../public/registre.html"
 })
 
 document.getElementById('inicio-sesion').addEventListener('click', function(event){
