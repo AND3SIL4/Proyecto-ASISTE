@@ -1,0 +1,8 @@
+django==4.2.3
+django-environ==0.10.0 # Protejer variables de git hub
+django-cors-headers==4.2.0 # Comunicacion front con back por dominios en especificos
+djangorestframework==3.14.0 # Para crear apis con Django
+Pillow==10.0.0 # Trabajar con imagenes
+django-storages==1.13.2 # Guardar imagenes en AWS
+django-ckeditor==6.6.1 # Para crear contenido mas dinamico
+
