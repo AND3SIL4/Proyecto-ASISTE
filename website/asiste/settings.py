@@ -34,7 +34,8 @@ DJANGO_APPS = [
 ]
 
 PROJECT_APPS = [
-    
+    'apps.asistencia',
+    'apps.novedades',
 ]
 THIRD_PARTY_APPS = [
     'corsheaders',
@@ -89,7 +90,7 @@ WSGI_APPLICATION = 'asiste.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'asiste_db',
+        'NAME': 'asiste_database',
         'USER': 'root',
         'PASSWORD': '2002',
         'HOST': 'localhost',

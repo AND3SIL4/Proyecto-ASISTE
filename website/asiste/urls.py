@@ -6,6 +6,7 @@ from django.conf import settings
 
 
 urlpatterns = [
+    path('api/asistencia/', include('apps.asistencia.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 # Url proyecto rect
