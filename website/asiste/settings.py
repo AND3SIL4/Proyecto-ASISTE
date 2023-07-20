@@ -35,7 +35,6 @@ DJANGO_APPS = [
 
 PROJECT_APPS = [
     'apps.asistencia',
-    'apps.novedades',
 ]
 THIRD_PARTY_APPS = [
     'corsheaders',
@@ -123,7 +122,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Lima'
 
 USE_I18N = True
 
