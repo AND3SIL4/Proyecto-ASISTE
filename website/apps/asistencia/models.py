@@ -2,6 +2,7 @@ from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.core.validators import RegexValidator
+from ckeditor.fields import RichTextField
 
 class CustomUserManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
@@ -74,7 +75,6 @@ class Instructor(models.Model):
     def __str__(self):
         return f"{self.nombres_intructor} {self.apellidos_instructor}"
 
-
 class Coodinacion(models.Model):
     class Meta:
         verbose_name = "Coodinacion"
@@ -98,7 +98,6 @@ class Programa(models.Model):
     def __str__(self):
         return f"{self.nombre_programa}"
 
-
 class Horario(models.Model):
     class Meta:
         verbose_name = "Horario"
@@ -108,13 +107,12 @@ class Horario(models.Model):
     hora_entrada = models.TimeField()
     hora_salida = models.TimeField()
     salon = models.IntegerField()
-    jornada = models.CharField(max_length=10, choices=[('Manana', 'Mañana'), ('Tarde', 'Tarde'), ('Noche', 'Noche')])
+    jornada = models.CharField(max_length=10, choices=[('Diurna', 'Diurna'), ('Tarde', 'Tarde'), ('Nocturna', 'Nocturna')])
     asignatura = models.CharField(max_length=45)
 
 
     def __str__(self):
         return f"{self.fecha}"
-
 
 class Ficha(models.Model):
     class Meta:
@@ -130,19 +128,14 @@ class Ficha(models.Model):
     def __str__(self):
         return f"{self.id_ficha}"
 
-
 class Aprendiz(models.Model):
     GENERO_CHOICES = (
-        ("M", "Masculino"),
-        ("F", "Femenino"),
-        ("H", "Homosexual"),
-        ("B", "Bisexsual"),
-        ("T", "Transexual"),
+        ("Masculino", "Masculino"),
+        ("Femenino", "Femenino"),
+        ("Homosexual", "Homosexual"),
+        ("Bisexsual", "Bisexsual"),
+        ("Transexual", "Transexual"),
     )
-
-    class Meta:
-        verbose_name = "Aprendiz"
-        verbose_name_plural = "Aprendices"
 
     documento_aprendiz = models.IntegerField(primary_key=True)
     tipo_documento = models.CharField(max_length=20, choices=[('Cedula','Cedula de ciudadania'),('Tarjeta','Tarjeta de identidad')])
@@ -150,16 +143,19 @@ class Aprendiz(models.Model):
     apellidos_aprendiz = models.CharField(max_length=45)
     email_personal_aprendiz = models.CharField(max_length=45)
     email_institucional_aprendiz = models.CharField(max_length=45)
-    numero_celular = models.IntegerField(validators=[
-            RegexValidator(r'^\d{10}$', 'Este campo debe tener exactamente 10 dígitos.')])
-    genero_aprendiz = models.CharField(max_length=1)
+    numero_celular = models.IntegerField()
+    genero_aprendiz = models.CharField(max_length=10, choices=GENERO_CHOICES)
     ficha_aprendiz = models.ForeignKey(Ficha, on_delete=models.CASCADE)
     user = models.OneToOneField(CustomUser, on_delete=models.DO_NOTHING)
+
+    class Meta:
+        verbose_name = "Aprendiz"
+        verbose_name_plural = "Aprendices"
+        ordering = ('-nombres_aprendiz',)
 
     def __str__(self):
         return f"{self.nombres_aprendiz} {self.apellidos_aprendiz}"
     
-
 class Novedad(models.Model):
     ESTADO_NOVEDAD_CHOICES = (
         (True, 'Aceptada'),
@@ -173,14 +169,13 @@ class Novedad(models.Model):
     aprendiz = models.ForeignKey(Aprendiz, on_delete=models.CASCADE)
     id_novedad  = models.AutoField(primary_key=True)
     tipo_novedad = models.CharField(max_length=10,choices=[('Calamidad', 'Calamidad domestica'), ('Medica', 'Novedad medica')])
-    observaciones = models.TextField(max_length=300)
+    observaciones = RichTextField(max_length=30, default='')
     archivo_adjunto = models.FileField(upload_to='pdfs/')
     estado_novedad = models.BooleanField(default=False, choices=ESTADO_NOVEDAD_CHOICES)
 
     def __str__(self):
         return f'{self.tipo_novedad} {self.id_novedad}'
     
-
 class Asistencia(models.Model):
     class Meta:
         verbose_name = "Asistencia"

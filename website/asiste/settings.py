@@ -45,8 +45,14 @@ INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS
 
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': 'full',
-        'autoParagraph': False
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-','Outdent','Ident','JustifyLeft','JustifyCenter'],
+            ['Link','Unlink'],
+            ['RemoveFormat','Source']
+        ],
+        'autoParagraph': False,
     }
 }
 CKEDITOR_UPLOAD_PATH = '/media/'
@@ -145,11 +151,17 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'build/static')]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# backend/settings.py
 REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly'
+        'rest_framework.permissions.IsAuthenticated',
     ],
 }
+
 
 CORS_ORIGIN_WHITELIST = env.list('CORS_ORIGIN_WHITELIST_DEV')
 CSRF_TRUSTED_ORIGINS = env.list('CORS_ORIGIN_WHITELIST_DEV')

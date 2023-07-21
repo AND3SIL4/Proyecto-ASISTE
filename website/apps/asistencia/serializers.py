@@ -7,6 +7,7 @@ class CustomUserSerializer(serializers.ModelSerializer):
         model = CustomUser
         fields = '__all__'
 class InstructorSerializer(serializers.ModelSerializer):
+    user_details = CustomUserSerializer(source='user', read_only=True)
     class Meta:
         model = Instructor
         fields = '__all__'
