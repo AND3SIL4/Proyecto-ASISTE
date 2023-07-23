@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_APRENDICES_FAIL, GET_APRENDICES_SUCCESS } from "./tipos";
+import { GET_APRENDICES_FAIL, GET_APRENDICES_SUCCESS } from "./types";
 
 export const get_aprendices = () => async (dispatch) => {
   const config = {

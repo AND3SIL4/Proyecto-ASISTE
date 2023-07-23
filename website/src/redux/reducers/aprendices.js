@@ -1,7 +1,4 @@
-import {
-  GET_APRENDICES_FAIL,
-  GET_APRENDICES_SUCCESS,
-} from "../actions/aprendices/tipos";
+import { GET_APRENDICES_FAIL, GET_APRENDICES_SUCCESS } from "../actions/types";
 
 const initialState = {
   aprendices: null,
@@ -21,7 +18,6 @@ export default function aprendices(state = initialState, action) {
         ...state,
         aprendices: null,
       };
-
     default:
       return state;
   }
