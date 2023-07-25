@@ -2,7 +2,16 @@ django==4.2.3
 django-environ==0.10.0 # Protejer variables de git hub
 django-cors-headers==4.2.0 # Comunicacion front con back por dominios en especificos
 djangorestframework==3.14.0 # Para crear apis con Django
+
+argon2-cffi==21.3.0
+djoser==2.1.0
+djangorestframework-simplejwt===4.8.0
+PyJWT==2.5.0
+social-auth-app-django==4.0.0
+social-auth-core==4.3.0
+
 Pillow==10.0.0 # Trabajar con imagenes
 django-storages==1.13.2 # Guardar imagenes en AWS
 django-ckeditor==6.6.1 # Para crear contenido mas dinamico
+psycopg2==2.9.5
 

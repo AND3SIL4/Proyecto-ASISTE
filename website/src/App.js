@@ -18,8 +18,6 @@ function App() {
           
           {/* Prueba1 display */}
           <Route path="/prueba1" element={<Prueba1></Prueba1>} />
-
-
         </Routes>
       </Router>
     </Provider>
